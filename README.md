@@ -40,4 +40,5 @@ const App: FC = () => {
 
 ## References
 
-https://github.com/gunn/pure-store
+- https://github.com/gunn/pure-store
+- https://github.com/crimx/observable-hooks
