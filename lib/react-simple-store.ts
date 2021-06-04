@@ -26,7 +26,7 @@ export const createTinyStore = <T>(initialState: T): Store<T> => {
     const SHOULD_UPDATE_FAST_CHECK = nextState !== innerState;
     if (SHOULD_UPDATE_FAST_CHECK) {
       innerState = nextState;
-      subscribers.forEach((callback) => callback());
+      subscribers.forEach((subscriber) => subscriber());
     }
   };
 
