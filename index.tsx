@@ -10,12 +10,31 @@ const [useStore, updateStore] = createReactSimpleStore({ count: 111 });
 
 // * ------------------------------------------------
 
-const App: FC = () => {
+export const App: FC = () => (
+  <>
+    <CompA />
+    <CompB />
+  </>
+);
+
+const CompA: FC = () => {
   const state = useStore();
 
   return (
     <div>
-      Counter: {state.count}
+      Child1 Counter: {state.count}
+      <button onClick={() => updateStore((s) => s.count++)}> +++ </button>
+      <button onClick={() => updateStore((s) => s.count--)}> --- </button>
+    </div>
+  );
+};
+
+const CompB: FC = () => {
+  const state = useStore();
+
+  return (
+    <div>
+      Child2 Counter: {state.count}
       <button onClick={() => updateStore((s) => s.count++)}> +++ </button>
       <button onClick={() => updateStore((s) => s.count--)}> --- </button>
     </div>
