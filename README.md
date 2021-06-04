@@ -5,9 +5,9 @@
 It's the core concept demo of the full state management system in our product, already battle-tested.
 
 - Pros
-  - tiny, only 60 lines
-  - super easy, only two apis
-  - typescript support
+  - Super **tiny** to modified, only 60 lines
+  - Super **easy** to use, only two APIs
+  - Full **typescript** support
 
 * What's not included in this demo
   - async support
